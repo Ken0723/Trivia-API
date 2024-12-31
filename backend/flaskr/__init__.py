@@ -93,8 +93,7 @@ def create_app(test_config=None):
                 'success': True,
                 'questions': formattedQuestions[start:end],
                 'total_questions': len(formattedQuestions),
-                'categories': formattedCategories,
-                'current_category': None
+                'categories': formattedCategories
             })
         except Exception as e:
             if isinstance(e, HTTPException):
@@ -209,8 +208,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'questions': formattedQuestions,
-                'total_questions': len(formattedQuestions),
-                'current_category': None
+                'total_questions': len(formattedQuestions)
             })
         except Exception as e:
             if isinstance(e, HTTPException):
